@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!--是否是分片-->
+    <isSharding>false</isSharding>
+    <!--是否是集群， 集群和分片只能有一个为true，但都可为false-->
+    <isCluster>true</isCluster>
+    <hosts>
+        <host>
+            <url>172.16.16.185</url>
+            <port>6379</port>
+        </host>
+    </hosts>
+</configuration>
