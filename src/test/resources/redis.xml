@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<configuration>
+<configuration
+        xmlns="http://www.piggsoft.com/redis"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.piggsoft.com/redis http://www.piggsoft.com/redis.xsd">
     <!--是否是分片-->
     <isSharding>true</isSharding>
     <!--是否是集群， 集群和分片只能有一个为true，但都可为false-->
