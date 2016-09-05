@@ -1,8 +1,8 @@
 package com.piggsoft.redis.connection;
 
-import com.piggsoft.redis.config.Config;
+import com.piggsoft.redis.config.bean.Config;
 import com.piggsoft.redis.config.ConfigFactory;
-import com.piggsoft.redis.config.Host;
+import com.piggsoft.redis.config.bean.Host;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +32,7 @@ public class ClientFactory {
     private static Object cluster_lock = new Object();
 
     private static GenericObjectPoolConfig genericObjectPoolConfig;
-
+    @SuppressWarnings("unchecked")
     private static Pool pool;
 
     private static JedisCluster jedisCluster;
