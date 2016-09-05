@@ -1,4 +1,4 @@
-package com.piggsoft.redis.config;
+package com.piggsoft.redis.config.bean;
 
 import javax.xml.bind.annotation.*;
 import java.util.List;

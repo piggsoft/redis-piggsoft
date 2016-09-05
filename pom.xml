@@ -63,10 +63,5 @@
             <scope>test</scope>
             <version>4.12</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>19.0</version>
-        </dependency>
     </dependencies>
 </project>

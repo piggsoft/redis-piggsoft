@@ -1,6 +1,5 @@
 package com.piggsoft.redis.proxy;
 
-import com.google.common.reflect.Reflection;
 import com.piggsoft.redis.connection.ClientFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +8,7 @@ import redis.clients.jedis.JedisCommands;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 /**
  * @author piggsoft
@@ -39,7 +39,12 @@ public class RedisProxy implements InvocationHandler {
     }
 
     private static JedisCommands newProxyInstance() {
-        return Reflection.newProxy(JedisCommands.class, new RedisProxy());
+        Object proxy = Proxy.newProxyInstance(
+                JedisCommands.class.getClassLoader(),
+                new Class<?>[] {JedisCommands.class},
+                new RedisProxy()
+        );
+        return JedisCommands.class.cast(proxy);
     }
 
     @Override
